@@ -1,7 +1,10 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL, // adapte si backend sur un autre port
+  baseURL:
+    import.meta.env.MODE === "development"
+      ? import.meta.env.VITE_API_URL_LOCAL
+      : import.meta.env.VITE_API_URL_PROD,
 });
 
 // Attacher le token JWT à chaque requête si présent
