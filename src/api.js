@@ -1,9 +1,8 @@
-// import axios from "axios";
+import axios from "axios";
 
-// const API = axios.create({
-//   baseURL: "http://localhost:5001", // adapte si backend sur un autre port
-// });
-const API = import.meta.env.VITE_API_URL;
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL, // adapte si backend sur un autre port
+});
 
 // Attacher le token JWT à chaque requête si présent
 API.interceptors.request.use((config) => {
@@ -20,14 +19,6 @@ export const updateUserProfile = (formData) =>
     headers: { "Content-Type": "multipart/form-data" },
   });
 export const getProfile = () => API.get("/auth/profile");
-
-
-// Users
-// export const createUser = (data) => API.post("/users/create", data);
-// export const fetchUsers = () => API.get("/users/get");
-// export const fetchUserById = (id) => API.get(`/users/${id}`);
-// export const updateUser = (id, data) => API.put(`/users/${id}`, data);
-// export const deleteUser = (id) => API.delete(`/users/${id}`);
 
 // Blogs (si tu as déjà un BlogController / BlogRoutes)
 export const updateBlog = (id, data) => API.put(`/blogs/${id}`, data);
