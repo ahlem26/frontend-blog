@@ -1,8 +1,9 @@
-import axios from "axios";
+// import axios from "axios";
 
-const API = axios.create({
-  baseURL: "http://localhost:5001", // adapte si backend sur un autre port
-});
+// const API = axios.create({
+//   baseURL: "http://localhost:5001", // adapte si backend sur un autre port
+// });
+const API = import.meta.env.VITE_API_URL;
 
 // Attacher le token JWT à chaque requête si présent
 API.interceptors.request.use((config) => {
