@@ -127,10 +127,10 @@ export default function Blogs() {
                     disabled={page <= 1}
                     onClick={() => setPage(page - 1)}
                     className={`px-4 py-2 rounded-lg font-medium transition ${page <= 1
-                            ? theme === "dark"
-                                ? "bg-gray-600 text-gray-300 cursor-not-allowed"
-                                : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                            : "bg-indigo-500 hover:bg-indigo-600 text-white"
+                        ? theme === "dark"
+                            ? "bg-gray-600 text-gray-300 cursor-not-allowed"
+                            : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                        : "bg-indigo-500 hover:bg-indigo-600 text-white"
                         }`}
                 >
                     ◀ Précédent
@@ -144,10 +144,10 @@ export default function Blogs() {
                     disabled={page >= totalPages}
                     onClick={() => setPage(page + 1)}
                     className={`px-4 py-2 rounded-lg font-medium transition ${page >= totalPages
-                            ? theme === "dark"
-                                ? "bg-gray-600 text-gray-300 cursor-not-allowed"
-                                : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                            : "bg-indigo-500 hover:bg-indigo-600 text-white"
+                        ? theme === "dark"
+                            ? "bg-gray-600 text-gray-300 cursor-not-allowed"
+                            : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                        : "bg-indigo-500 hover:bg-indigo-600 text-white"
                         }`}
                 >
                     Suivant ▶
